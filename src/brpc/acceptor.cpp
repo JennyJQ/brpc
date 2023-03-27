@@ -50,7 +50,7 @@ Acceptor::~Acceptor() {
 int Acceptor::StartAccept(int listened_fd, int idle_timeout_sec,
                           const std::shared_ptr<SocketSSLContext>& ssl_ctx) {
     if (listened_fd < 0) {
-        LOG(FATAL) << "Invalid listened_fd=" << listened_fd;
+         LOG(FATAL) << "Invalid listened_fd=" << listened_fd;
         return -1;
     }
     
