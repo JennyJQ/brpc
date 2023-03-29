@@ -351,4 +351,4 @@ void Acceptor::BeforeRecycle(Socket* sock) {
     }
 }
 
-} // namespace brpc
+}  // namespace brpc
