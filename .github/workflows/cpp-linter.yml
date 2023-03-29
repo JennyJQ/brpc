@@ -1,4 +1,4 @@
-name: cpp-linter
+name: Linter Check
 
 on:
   pull_request:
@@ -17,6 +17,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           style: file
+          thread-comments: true
 
       - name: Fail fast?!
         if: steps.linter.outputs.checks-failed > 0
