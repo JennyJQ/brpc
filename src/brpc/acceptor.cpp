@@ -114,7 +114,6 @@ void Acceptor::StopAccept(int /*closewait_ms*/) {
     // Currently `closewait_ms' is useless since we have to wait until 
     // existing requests are finished. Otherwise, contexts depended by 
     // the requests may be deleted and invalid.
-
     {
         BAIDU_SCOPED_LOCK(_map_mutex);
         if (_status != RUNNING) {
@@ -352,4 +351,4 @@ void Acceptor::BeforeRecycle(Socket* sock) {
     }
 }
 
-} // namespace brpc
+}  // namespace brpc
